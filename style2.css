@@ -696,8 +696,10 @@ font-size: 25px;
 /*reviews*/
 
 .reviews {
-    padding:0 110px;
     position: relative; /*for btn*/
+}
+.reviews .slick-slider {
+    padding:0 110px;
 }
 .reviews_item {
     padding-left: 255px;
@@ -740,8 +742,11 @@ font-size: 25px;
     background-color: #f38181;
 }
 
-.reviews_btn{
+.slick-arrow{
+    display: block;
     font-size: 0;
+    border: 0;
+    background: none;
     color:transparent; /*For we dont see a text*/
     position: absolute;
     top:50%;
@@ -749,7 +754,7 @@ font-size: 25px;
     transform: translateY(-50%);
 }
 
-.reviews_btn:after {
+.slick-arrow:after {
     content: "";
     display: block;
     width: 16px;
@@ -757,11 +762,14 @@ font-size: 25px;
     border-top: 2px solid #ccc;
     border-left: 2px solid #ccc;
 }
-.reviews_btn--prev {
+.slick-arrow:focus {
+    outline: none;
+}
+ .slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
-.reviews_btn--next {
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
@@ -1334,7 +1342,7 @@ text-decoration: underline;
 
     /*reviews*/
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0 60px;
     }
 
@@ -1643,11 +1651,11 @@ text-decoration: underline;
 
     /*reviews*/
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0;
     }
 
-    .reviews_btn {
+    .slick-arrow {
         top: 18%;
     }
 
